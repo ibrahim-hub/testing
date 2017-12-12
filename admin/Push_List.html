@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<title>Ultimate Taxi App</title>
+	<link rel="shortcut icon" href="assets/backend/images/logo.png"/> 
+	<style type="text/css">    
+		/*General styles*/
+		body
+		{
+			margin: 0;
+			padding: 0;
+			background: white no-repeat left top;
+		}
+
+		#main
+		{
+			width: -moz-min-content;
+			margin: 10px;
+			background: white;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+			padding: 30px;
+			border: 1px solid #adaa9f;
+			-moz-box-shadow: 0 2px 2px #9c9c9c;
+			-webkit-box-shadow: 0 2px 2px #9c9c9c;
+		}
+
+		/*Features table------------------------------------------------------------*/
+		.features-table
+		{
+			width: 100%;
+			margin: 0 auto;
+			border-collapse: separate;
+			border-spacing: 0;
+			text-shadow: 0 1px 0 #fff;
+			color: #2a2a2a;
+			background: #fafafa;  
+			background-image: -moz-linear-gradient(top, #fff, #eaeaea, #fff); /* Firefox 3.6 */
+			background-image: -webkit-gradient(linear,center bottom,center top,from(#fff),color-stop(0.5, #eaeaea),to(#fff)); 
+		}
+
+		.features-table td
+		{
+			height: 50px;
+			line-height: 50px;
+			padding: 0 20px;
+			border-bottom: 1px solid #cdcdcd;
+			box-shadow: 0 1px 0 white;
+			-moz-box-shadow: 0 1px 0 white;
+			-webkit-box-shadow: 0 1px 0 white;
+			white-space: nowrap;
+			text-align: center;
+
+		}
+
+		/*Body*/
+		.features-table tbody td
+		{
+			text-align: center;
+			font: normal 12px Verdana, Arial, Helvetica;
+			width: auto;
+		}
+
+		.features-table tbody td:first-child
+		{
+			width: auto;
+			text-align: left;
+
+		}
+
+		.features-table td:nth-child(3), .features-table td:nth-child(5)
+		{
+			background: #efefef;
+			background: rgba(144,144,144,0.15);
+			border-right: 1px solid white;
+
+		}
+
+
+		.features-table td:nth-child(4), .features-table td:nth-child(8), .features-table td:nth-child(6), .features-table td:nth-child(1)
+		{
+			background: #e7f3d4;  
+			background: rgba(184,243,85,0.3);
+		}
+
+		/*Header*/
+		.features-table thead td
+		{
+			font: bold 1.3em 'trebuchet MS', 'Lucida Sans', Arial;  
+			-moz-border-radius-topright: 10px;
+			-moz-border-radius-topleft: 10px; 
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+			border-top: 1px solid #eaeaea; 
+		}
+
+		.features-table thead td:first-child
+		{
+			border-top: none;
+		}
+
+		/*Footer*/
+		.features-table tfoot td
+		{
+			font: bold 1.4em Georgia;  
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 10px; 
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-bottom: 1px solid #dadada;
+		}
+
+		.features-table tfoot td:first-child
+		{
+			border-bottom: none;
+		}
+	</style> 
+</head>
+<body>
+	<div id="main">
+		<table class="features-table">
+			<thead>					
+				<tr>
+					<td>No</td>
+					<td>tag or flag name</td>
+					<td>Android Keys (message, flag) OR IOS Keys(alert,sound, tag)</td>				
+					
+					<td>Special Notes</td>					
+				</tr>
+			</thead>				 				
+			<tbody>
+				<tr>
+					<td colspan="4"><h3>Trip</h3></td>
+				</tr>
+				<tr style="color:red;">
+					<td>1</td>
+					<td>find_drivers</td>
+					<td>order_id, user_id, trip_type</td>
+					<td>This push is for new order</td>
+				</tr>
+				<tr style="color:red;">
+					<td>2</td>
+					<td>accept_order</td>
+					<td>order_id, driver_id, trip_type</td>
+					<td></td>
+				</tr>
+				<tr style="color:red;">
+					<td>3</td>
+					<td>arrived</td>
+					<td>order_id, driver_id, trip_type</td>
+					<td></td>
+				</tr>
+				<tr style="color:red;">
+					<td>4</td>
+					<td>pickup</td>
+					<td>order_id, driver_id, trip_type</td>
+					<td></td>
+				</tr>
+				<tr style="color:red;">
+					<td>5</td>
+					<td>dropoff</td>
+					<td>order_id, driver_id, trip_type</td>
+					<td></td>
+				</tr>
+				<tr style="color:red;">
+					<td>6</td>
+					<td>cancel_order</td>
+					<td>order_id, trip_type</td>
+					<td></td>
+				</tr>
+				<tr style="color:red;">
+					<td>7</td>
+					<td>change_dropoff</td>
+					<td>order_id, trip_type</td>
+					<td></td>
+				</tr>
+				<tr style="color:red;">
+					<td>8</td>
+					<td>user_payment</td>
+					<td>order_id, user_id, trip_type</td>
+					<td></td>
+				</tr>
+				<tr style="color:red;">
+					<td>9</td>
+					<td>decline_order</td>
+					<td>order_id, trip_type</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

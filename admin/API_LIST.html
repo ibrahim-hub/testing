@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<title>SAIK Taxi App</title>
+	<link rel="shortcut icon" href="assets/backend/images/logo.png"/> 
+	<style type="text/css">    
+		/*General styles*/
+		body
+		{
+			margin: 0;
+			padding: 0;
+			background: white no-repeat left top;
+		}
+
+		#main
+		{
+			width: -moz-min-content;
+			margin: 10px;
+			background: white;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+			padding: 30px;
+			border: 1px solid #adaa9f;
+			-moz-box-shadow: 0 2px 2px #9c9c9c;
+			-webkit-box-shadow: 0 2px 2px #9c9c9c;
+		}
+
+		/*Features table------------------------------------------------------------*/
+		.features-table
+		{
+			width: 100%;
+			margin: 0 auto;
+			border-collapse: separate;
+			border-spacing: 0;
+			text-shadow: 0 1px 0 #fff;
+			color: #2a2a2a;
+			background: #fafafa;  
+			background-image: -moz-linear-gradient(top, #fff, #eaeaea, #fff); /* Firefox 3.6 */
+			background-image: -webkit-gradient(linear,center bottom,center top,from(#fff),color-stop(0.5, #eaeaea),to(#fff)); 
+		}
+
+		.features-table td
+		{
+			height: 50px;
+			line-height: 50px;
+			padding: 0 20px;
+			border-bottom: 1px solid #cdcdcd;
+			box-shadow: 0 1px 0 white;
+			-moz-box-shadow: 0 1px 0 white;
+			-webkit-box-shadow: 0 1px 0 white;
+			white-space: nowrap;
+			text-align: center;
+
+		}
+
+		/*Body*/
+		.features-table tbody td
+		{
+			text-align: center;
+			font: normal 12px Verdana, Arial, Helvetica;
+			width: auto;
+		}
+
+		.features-table tbody td:first-child
+		{
+			width: auto;
+			text-align: left;
+
+		}
+
+		.features-table td:nth-child(3), .features-table td:nth-child(5)
+		{
+			background: #efefef;
+			background: rgba(144,144,144,0.15);
+			border-right: 1px solid white;
+
+		}
+
+
+		.features-table td:nth-child(4), .features-table td:nth-child(8), .features-table td:nth-child(6), .features-table td:nth-child(1)
+		{
+			background: #e7f3d4;  
+			background: rgba(184,243,85,0.3);
+		}
+
+		/*Header*/
+		.features-table thead td
+		{
+			font: bold 1.3em 'trebuchet MS', 'Lucida Sans', Arial;  
+			-moz-border-radius-topright: 10px;
+			-moz-border-radius-topleft: 10px; 
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+			border-top: 1px solid #eaeaea; 
+		}
+
+		.features-table thead td:first-child
+		{
+			border-top: none;
+		}
+
+		/*Footer*/
+		.features-table tfoot td
+		{
+			font: bold 1.4em Georgia;  
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 10px; 
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-bottom: 1px solid #dadada;
+		}
+
+		.features-table tfoot td:first-child
+		{
+			border-bottom: none;
+		}
+	</style> 
+</head>
+<body>
+	<div id="main">
+		<span>Server URL :: http://132.148.17.145/~hyperlinkserver/ultimatetaxi/api/v1/</span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		<hr>
+
+		<span>Passenger Listing URL :: <a href="http://132.148.17.145/~hyperlinkserver/ultimatetaxi/User_list/listing" target="_blank">http://132.148.17.145/~hyperlinkserver/ultimatetaxi/User_list/listing</a></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		<hr>
+
+		<span>Driver Listing URL :: <a href="http://132.148.17.145/~hyperlinkserver/ultimatetaxi/Driver_list/listing" target="_blank">http://132.148.17.145/~hyperlinkserver/ultimatetaxi/Driver_list/listing</a></span></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		<hr>
+
+		<span>Order Listing URL ::<a href="http://132.148.17.145/~hyperlinkserver/ultimatetaxi/Order_list/listing" target="_blank">http://132.148.17.145/~hyperlinkserver/ultimatetaxi/Order_list/listing</a></span></span> </span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		<hr>
+
+		<span>Push Listing URL :: <a href="http://132.148.17.145/~hyperlinkserver/ultimatetaxi/Push_List.html" target="_blank">http://132.148.17.145/~hyperlinkserver/ultimatetaxi/Push_List.html</a></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		<hr>
+		
+		<span>Header Authentication <br>Header key:: <b>Authorization-Hanafi-Restaurant</b> <br>Header Value: <b>jilesh</b></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+		<hr>
+		
+		<span>Header Token <br>Header key:: <b>token</b> <br>Header Value: <b>user token / driver token</b></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<!-- <span>API Excel: <a href="API_LIST.ods">EXPORT</a></span> -->
+		<br/>
+		<hr>
+
+		<span>Language <br>Header key:: <b>Content-Language</b> <br>Header Value: <b>(english->Default, arabic)</b></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br>
+
+		<hr>
+
+		<b>
+			<font color="red">Red color api will be new or modified</font>
+		</b>
+		<br>
+		
+		<br/>
+		<table class="features-table">
+			<thead>					
+				<tr>
+					<td>No</td>
+					<td>URL</td>
+					<td>Method</td>				
+					<td>Mandatory Parameter</td>
+					<td>Optional Parameter</td>
+					<td>Response Code</td>
+					<td>Notes</td>					
+				</tr>
+			</thead>				 				
+			<tbody>
+				<tr>
+					<td colspan="7"><h3>Users API</h3></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>user/send_otp/</td>
+					<td>POST</td>
+					<td>country_code, phone, otp</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is for send OTP for specific mobile number</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>user/signup/</td>
+					<td>POST</td>
+					<td>fname, lname, country_code, phone, otp,<br> device_id, device_type,latitude,longitude, <br>emergency_country_code, emergency_number</td>
+					<td>email, profile_image, fb_id, password, referal_code,location</td>
+					<td>HTTP Code: CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to register new user.</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>user/edit/</td>
+					<td>POST</td>
+					<td>user_id, fname, lname,emergency_country_code, emergency_number, </td>
+					<td>email, profile_image, location</td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to edit user profile.</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>user/login/</td>
+					<td>PUT</td>
+					<td>device_id, device_type, latitude, longitude</td>
+					<td>(email OR phone), password, fb_id</td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400) <br><hr>HTTP Code: HTTP_NOT_ACCEPTABLE(406)<br> Please redirect to signup page<br><hr><font color="red">HTTP Code: PRECONDITION_FAILED (412) <br> Please redirect to OTP verification screen </font></td>
+					<td>This api is used to login.</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>user/forgotpassword/</td>
+					<td>POST</td>
+					<td>country_code, phone</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to recover password on phone.</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>user/users/</td>
+					<td>GET</td>
+					<td>user_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to get user details.</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>user/logout/</td>
+					<td>GET</td>
+					<td>user_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to logout from application.</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>user/update_location/</td>
+					<td>POST</td>
+					<td>user_id, device_id, device_type, latitude, longitude</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to update the location and device id from application.</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>user/change_password/</td>
+					<td>POST</td>
+					<td>user_id, old_password, new_password</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to change the password from application.</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>user/near_free_drivers/</td>
+					<td>GET</td>
+					<td>latitude, longitude</td>
+					<td>car_type</td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to get the near free drivers.</td>
+				</tr>
+				<tr style="color:blue">
+					<td>11</td>
+					<td>user/test_push/</td>
+					<td>POST</td>
+					<td>device_id, user_type(user/driver)</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to send test push for android.</td>
+				</tr>
+				<tr style="color:blue">
+					<td>12</td>
+					<td>user/test_push_ios/</td>
+					<td>POST</td>
+					<td>device_id, user_type(user/driver)</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to send test push for IOS.</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>user/contact_us/</td>
+					<td>POST</td>
+					<td>email, subject, message</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to send test push for IOS.</td>
+				</tr>
+
+				<tr>
+					<td colspan="7"><h3>Drivers API</h3></td>
+				</tr>
+
+				<tr>
+					<td>1</td>
+					<td>driver/send_otp/</td>
+					<td>POST</td>
+					<td>country_code, phone, otp</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is for send OTP for specific mobile number</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>driver/signup/</td>
+					<td>POST</td>
+					<td>fname, lname, country_code,phone,otp,<br> car_model, car_color, car_platenumber,<br> device_id, device_type,address,latitude,longitude</td>
+					<td>email, profile_image, fb_id, password</td>
+					<td>HTTP Code: CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to register new driver.</td>
+				</tr>
+				 <tr>
+					<td>3</td>
+					<td>driver/edit/</td>
+					<td>POST</td>
+					<td>driver_id, fname, lname</td>
+					<td>profile_image</td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to edit driver profile.</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>driver/login/</td>
+					<td>PUT</td>
+					<td>device_id, device_type, latitude, longitude</td>
+					<td>(email OR phone),  password, fb_id</td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400) <br><hr>HTTP Code: HTTP_NOT_ACCEPTABLE(406)<br> Please redirect to signup page<br><hr><font color="red">HTTP Code: PRECONDITION_FAILED (412) <br> Please redirect to OTP verification screen<br><hr>HTTP Code: HTTP_METHOD_NOT_ALLOWED(405)<br> Redirect to bank screen<br><hr>HTTP Code: HTTP_EXPECTATION_FAILED(417)<br> Redirect to document screen </font> </td>
+					<td>This api is used for driver login.</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>driver/forgotpassword/</td>
+					<td>POST</td>
+					<td>country_code, phone</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to recover password.</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>driver/drivers/</td>
+					<td>GET</td>
+					<td>driver_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to get driver details</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>driver/logout/</td>
+					<td>GET</td>
+					<td>driver_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to logout from application.</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>driver/update_location/</td>
+					<td>POST</td>
+					<td>driver_id, device_id, device_type, latitude, longitude</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to update the location and device id from application.</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>driver/free/</td>
+					<td>GET</td>
+					<td>driver_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to free driver.</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>driver/change_password/</td>
+					<td>POST</td>
+					<td>driver_id, old_password, new_password</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to change the password from application.</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>driver/verify_otp/</td>
+					<td>GET</td>
+					<td>phone, otp</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is verify the OTP of driver</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>driver/save_document/</td>
+					<td>POST</td>
+					<td>driver_id, doc_type(registration_image, vehicle_front_image, vehicle_back_image,<br> licence_image, driver_id_image, owner_id_image)</td>
+					<td>registration_image, vehicle_front_image, vehicle_back_image, licence_image,<br> driver_id_image, owner_id_image (Atleast one is compulsory)</td>
+					<td>HTTP Code: HTTP_CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to save the document</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>driver/save_bank/</td>
+					<td>POST</td>
+					<td>bank_name, account_number</td>
+					<td></td>
+					<td>HTTP Code: HTTP_CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to save the bank information</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>driver/get_documents/</td>
+					<td>GET</td>
+					<td>driver_id</td>
+					<td></td>
+					<td>HTTP Code: HTTP_OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to get the document</td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>driver/edit_document/</td>
+					<td>POST</td>
+					<td>driver_id, doc_type(registration_image, vehicle_front_image, vehicle_back_image,<br> licence_image, driver_id_image, owner_id_image)</td>
+					<td>registration_image, vehicle_front_image, vehicle_back_image, licence_image,<br> driver_id_image, owner_id_image (Atleast one is compulsory)</td>
+					<td>HTTP Code: HTTP_CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to update the document</td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>driver/edit_bank/</td>
+					<td>POST</td>
+					<td>bank_name, account_number</td>
+					<td></td>
+					<td>HTTP Code: HTTP_CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to update the bank information</td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td>driver/service_change/</td>
+					<td>GET</td>
+					<td>driver_id, status(1 => On, 0 => Off)</td>
+					<td></td>
+					<td>HTTP Code: HTTP_CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to change the driver service</td>
+				</tr>
+
+				<tr style="color: red;">
+					<td>18</td>
+					<td>driver/add_couponcard/</td>
+					<td>PUT</td>
+					<td>driver_id, coupon_card</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to driver can add coupon card for his wallet balance.</td>
+				</tr>
+
+				<tr>
+					<td colspan="7"><h3>Trip API</h3></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>order/fare_estimation/</td>
+					<td>POST</td>
+					<td>user_id, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude, car_type</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to get fare estimation for ride.</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>order/place_order/</td>
+					<td>POST</td>
+					<td>user_id,pickup_address,pickup_latitude,pickup_longitude,<br>,trip_type(now / later), payment_type(cash/card)</td>
+					<td>dropoff_latitude,dropoff_longitude, dropoff_address,<br>tripdatetime (Compulsory if trip type is later), promocode</td>
+					<td>HTTP Code: CREATED (201)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to place order.</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>order/get_order_details/</td>
+					<td>GET</td>
+					<td>id(ID of Trip)</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to get the ride details.</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>order/accept_order/</td>
+					<td>GET</td>
+					<td>order_id, driver_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to accept the order.</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>order/decline_order/</td>
+					<td>GET</td>
+					<td>order_id, driver_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to decline the order and pass to another driver.</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>order/arrived/</td>
+					<td>GET</td>
+					<td>order_id, driver_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to send notification to user that the driver has arrived at the pickup location.</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>order/pickup/</td>
+					<td>GET</td>
+					<td>order_id, driver_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to start the ride.</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>order/cancel_order/</td>
+					<td>PUT</td>
+					<td>order_id, id(ID of user/driver), user_type(user/driver), reason</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to cancel the ride.</td>
+				</tr> 
+				<tr>
+					<td>9</td>
+					<td>order/dropoff/</td>
+					<td>POST</td>
+					<td>order_id, driver_id, distance, dropoff_latitude,dropoff_longitude,<br> dropoff_address,waiting_time_min(Default pass 0)</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to complete the ride.</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>order/user_payment/</td>
+					<td>GET</td>
+					<td>order_id, id(ID of user), payment_type</td>
+					<td>driver_tip</td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to make the payment for ride.</td>
+				</tr> 
+				<tr>
+					<td>11</td>
+					<td>order/past_orders/</td>
+					<td>GET</td>
+					<td>id(ID of user/driver), user_type(user/driver), page(Default 1)</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to the past ride history of user or driver.</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>order/future_orders/</td>
+					<td>GET</td>
+					<td>id(ID of user/driver), user_type(user/driver), page(Default 1)</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to the future ride history of user or driver.</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>order/order_status/</td>
+					<td>GET</td>
+					<td>id(ID of user/driver), user_type(user/driver)</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to check the pending ride.</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>order/rate_review/</td>
+					<td>PUT</td>
+					<td>id(ID of user/driver to be rated), user_type(user/driver to be rated), rate ,rate_type</td>
+					<td>comment</td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to rate the driver or user.</td>
+				</tr> 
+				<!-- <tr style="color: green;">
+					<td>16</td>
+					<td>order/change_dropoff/</td>
+					<td>POST</td>
+					<td>order_id, dropoff_address, dropoff_latitude, dropoff_longitude</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to change the dropoff address.</td>
+				</tr> -->
+				<tr  style="color: blue;">
+					<td>15</td>
+					<td>order/get_rating_list/</td>
+					<td>GET</td>
+					<td></td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is used to get rating list.</td>
+				</tr>
+				<!-- <tr  style="color: red;">
+					<td>17</td>
+					<td>order/check_card/</td>
+					<td>GET</td>
+					<td>user_id</td>
+					<td></td>
+					<td>HTTP Code: OK (200)<br><hr>HTTP Code: BAD_REQUEST (400)</td>
+					<td>This api is check user has card or not.</td>
+				</tr> -->
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
